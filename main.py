@@ -13,10 +13,10 @@ import myfuncts as mf
 showManual = mf.showManual
 
 #TODO:
-# 1.Add untranslatable words list
-# 2.Make own dictionary (SQL)
-# 3.Add nice UI
-# 4.Make loading bar
+#   Move .ui files in extra folder
+#   Make pretty README.MD file
+#   Make perfect gui design
+#   Add a lot of comments
 
 # Открытие необходимых файлов
 # И создание необходимых необходимостей
