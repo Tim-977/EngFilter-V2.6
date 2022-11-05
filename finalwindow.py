@@ -14,6 +14,8 @@ class Final(QWidget):
         self.setWindowFlags(QtCore.Qt.Widget | QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_NoSystemBackground, True)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
+        self.setFixedWidth(619)
+        self.setFixedHeight(538)
         oImage = QImage("Pics\\bgframe.png")
         sImage = oImage.scaled(QSize(611, 524))
         palette = QPalette()

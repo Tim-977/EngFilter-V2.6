@@ -1,7 +1,7 @@
 import sys
 
 from deep_translator import GoogleTranslator
-from PyQt5 import uic
+from PyQt5 import uic, QtCore
 from PyQt5.QtCore import QSize, Qt
 from PyQt5.QtGui import QBrush, QFont, QImage, QPalette
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
@@ -98,11 +98,11 @@ class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('EngFilUi.ui', self)
-        oImage = QImage("Pics\\bgframe.png")
-        sImage = oImage.scaled(QSize(903, 679))
-        palette = QPalette()
-        palette.setBrush(QPalette.Window, QBrush(sImage))
-        self.setPalette(palette)
+        self.setWindowFlags(QtCore.Qt.Widget | QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_NoSystemBackground, True)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
+        self.setFixedWidth(903)
+        self.setFixedHeight(731)
         self.stepBackFlag = mf.stepBackFlag
         self.stepBackFlagNew = mf.stepBackFlagNew
         self.stepBackFlagOld = mf.stepBackFlagOld
@@ -146,8 +146,6 @@ class MyWidget(QMainWindow):
         # self.oldBtn.setStyleSheet("color: red; background-image: url(frame4.png);")
         self.stepBtn.setEnabled(False)
         self.stepBtn.clicked.connect(self.stepback)
-        self.originalLabel.setStyleSheet("color: rgb(0, 0, 0);")
-        self.translatedLabel.setStyleSheet("color: rgb(0, 0, 0);")
         self.word_3.setStyleSheet("color: #C0C0C0;")
         self.word_2.setStyleSheet("color: #909090;")
         self.word_1.setStyleSheet("color: #606060;")

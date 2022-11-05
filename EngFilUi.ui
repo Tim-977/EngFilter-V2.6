@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>903</width>
-    <height>679</height>
+    <height>731</height>
    </rect>
   </property>
   <property name="cursor">
@@ -44,6 +44,11 @@
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	color: #66910D;
+}</string>
+    </property>
     <property name="text">
      <string>OLD WORD</string>
     </property>
@@ -69,6 +74,11 @@
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	color: #66910D;
+}</string>
+    </property>
     <property name="text">
      <string>NEW WORD</string>
     </property>
@@ -80,9 +90,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>10</y>
       <width>451</width>
-      <height>101</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -93,6 +103,11 @@
     </property>
     <property name="layoutDirection">
      <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #A7DB37; 
+}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
@@ -116,23 +131,38 @@
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>20</x>
       <y>580</y>
-      <width>901</width>
+      <width>871</width>
       <height>71</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Tempus Sans ITC</family>
-      <pointsize>20</pointsize>
+      <pointsize>28</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QProgressBar{
+	background-color: rgb(124, 113, 116);
+	border-radius: 10px;
+	color: rgb(68, 56, 72);
+}
+
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #12E02C, stop:1 #DAEB00);
+}</string>
     </property>
     <property name="maximum">
      <number>100</number>
     </property>
     <property name="value">
      <number>0</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="leftLbl">
@@ -149,6 +179,11 @@
       <family>Tempus Sans ITC</family>
       <pointsize>24</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
     </property>
     <property name="text">
      <string>WORDS LEFT</string>
@@ -172,6 +207,11 @@
       <pointsize>24</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
+    </property>
     <property name="text">
      <string>0</string>
     </property>
@@ -193,6 +233,11 @@
       <family>Tempus Sans ITC</family>
       <pointsize>24</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
     </property>
     <property name="text">
      <string>WORDS BEHIND</string>
@@ -216,6 +261,11 @@
       <pointsize>24</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
+    </property>
     <property name="text">
      <string>0</string>
     </property>
@@ -227,7 +277,7 @@
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>0</y>
+      <y>10</y>
       <width>451</width>
       <height>161</height>
      </rect>
@@ -240,6 +290,11 @@
     </property>
     <property name="layoutDirection">
      <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #A7DB37; 
+}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
@@ -278,6 +333,11 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
+    </property>
     <property name="text">
      <string>A WORD</string>
     </property>
@@ -299,6 +359,11 @@
       <family>Tempus Sans ITC</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
     </property>
     <property name="text">
      <string>A WORD</string>
@@ -322,6 +387,11 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
+    </property>
     <property name="text">
      <string>A WORD</string>
     </property>
@@ -343,6 +413,11 @@
       <family>Tempus Sans ITC</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
     </property>
     <property name="text">
      <string>A WORD</string>
@@ -366,6 +441,11 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
+    </property>
     <property name="text">
      <string>A WORD</string>
     </property>
@@ -388,6 +468,11 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
+    </property>
     <property name="text">
      <string>A WORD</string>
     </property>
@@ -409,6 +494,11 @@
       <family>Tempus Sans ITC</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: #66910D; 
+}</string>
     </property>
     <property name="text">
      <string>A WORD</string>
@@ -435,6 +525,11 @@
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	color: #66910D;
+}</string>
+    </property>
     <property name="text">
      <string>Open manual</string>
     </property>
@@ -460,6 +555,11 @@
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	color: #66910D;
+}</string>
+    </property>
     <property name="text">
      <string>Step Back</string>
     </property>
@@ -467,6 +567,47 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>891</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+	border-radius: 10px;
+	background-color: rgb(68, 56, 72)
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>oldBtn</zorder>
+   <zorder>newBtn</zorder>
+   <zorder>originalLabel</zorder>
+   <zorder>progressBar</zorder>
+   <zorder>leftLbl</zorder>
+   <zorder>left_numLbl</zorder>
+   <zorder>behindLbl</zorder>
+   <zorder>behind_numLbl</zorder>
+   <zorder>translatedLabel</zorder>
+   <zorder>word0</zorder>
+   <zorder>word_2</zorder>
+   <zorder>word_1</zorder>
+   <zorder>word2</zorder>
+   <zorder>word1</zorder>
+   <zorder>word3</zorder>
+   <zorder>word_3</zorder>
+   <zorder>manualBtn</zorder>
+   <zorder>stepBtn</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -51,8 +51,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Showcard Gothic</family>
-      <pointsize>10</pointsize>
+      <family>Tempus Sans ITC</family>
+      <pointsize>12</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -61,13 +61,12 @@
      <string notr="true">QProgressBar{
 	background-color: rgb(124, 113, 116);
 	border-radius: 10px;
-	color: white;
+	color: rgb(68, 56, 72);
 }
 
 QProgressBar::chunk{
 	border-radius: 10px;
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0
-rgba(201, 87, 149, 225), stop:1 rgba(179, 65, 244, 225));
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #12E02C, stop:1 #DAEB00);
 }</string>
     </property>
     <property name="value">

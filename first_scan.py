@@ -18,6 +18,8 @@ class MyWidget1(QMainWindow):
         self.setWindowFlags(QtCore.Qt.Widget | QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_NoSystemBackground, True)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
+        self.setFixedWidth(405)
+        self.setFixedHeight(189)
         self.progressBar.setValue(0)
         self.testRunFlag = mf.testRunFlag
         self.testPrecentageFlag = mf.testPrecentageFlag
