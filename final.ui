@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>611</width>
-    <height>524</height>
+    <width>619</width>
+    <height>538</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,16 +19,21 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>611</width>
-     <height>111</height>
+     <x>10</x>
+     <y>10</y>
+     <width>601</width>
+     <height>101</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>24</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	color: #66910D;
+}</string>
    </property>
    <property name="text">
     <string>Конец работы программы!
@@ -46,6 +51,9 @@
      <width>511</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <property name="minimum">
     <number>1</number>
@@ -69,11 +77,17 @@
   <widget class="QPlainTextEdit" name="plainTextEdit">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>210</y>
-     <width>591</width>
+     <width>581</width>
      <height>251</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPlainTextEdit{
+	background-color: rgb(68, 56, 72);
+	color: #66910D;
+}</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::WinPanel</enum>
@@ -99,6 +113,11 @@
      <pointsize>24</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	color: #66910D;
+}</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
    </property>
@@ -122,6 +141,11 @@
     <font>
      <pointsize>24</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	color: #66910D;
+}</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
@@ -147,6 +171,11 @@
      <pointsize>24</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	color: #66910D;
+}</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
    </property>
@@ -170,6 +199,11 @@
     <font>
      <pointsize>24</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	color: #66910D;
+}</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
@@ -195,6 +229,11 @@
      <pointsize>24</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	color: #66910D;
+}</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
    </property>
@@ -208,9 +247,9 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>30</x>
      <y>470</y>
-     <width>591</width>
+     <width>561</width>
      <height>51</height>
     </rect>
    </property>
@@ -219,10 +258,49 @@
      <pointsize>26</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-radius: 10px;
+	color: rgb(68, 56, 72);
+	background-color: #66910D;
+}</string>
+   </property>
    <property name="text">
     <string>ОТПРАВИТЬ ОТЗЫВ!</string>
    </property>
   </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>601</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame {
+	border-radius: 10px;
+	background-color: rgb(68, 56, 72)
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>label</zorder>
+  <zorder>horizontalSlider</zorder>
+  <zorder>plainTextEdit</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections/>

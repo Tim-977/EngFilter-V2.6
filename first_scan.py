@@ -1,6 +1,5 @@
 #import os
 import sys
-import time
 
 from deep_translator import GoogleTranslator
 from PyQt5 import QtCore, uic
@@ -16,8 +15,6 @@ class MyWidget1(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('loading.ui', self)
-        '''flags = QtCore.Qt.WindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint)
-        self.setWindowFlags(flags)'''
         self.setWindowFlags(QtCore.Qt.Widget | QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_NoSystemBackground, True)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
@@ -120,7 +117,6 @@ class MyWidget1(QMainWindow):
         self.out2.close()
         self.out_tr.close()
 
-        time.sleep(1)
         self.close()
 
         print('bye))')
