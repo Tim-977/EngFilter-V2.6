@@ -168,7 +168,7 @@ QProgressBar::chunk{
      <string notr="true">QPushButton{
 	border-radius: 10px;
 	color: #F29F05;
-	background-color: #665C4A;
+	background-color: #595645;
 }</string>
     </property>
     <property name="text">

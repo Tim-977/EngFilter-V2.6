@@ -17,6 +17,9 @@ showManual = mf.showManual
 #   Make pretty README.MD file
 #   Make perfect gui design
 #   Add a lot of comments
+#   Add my contacts
+#   Fix words "ios" scroll
+#   Add Snapback secret
 
 # Открытие необходимых файлов
 # И создание необходимых необходимостей

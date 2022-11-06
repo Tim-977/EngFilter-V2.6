@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>936</width>
-    <height>731</height>
+    <height>807</height>
    </rect>
   </property>
   <property name="cursor">
@@ -30,9 +30,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>100</y>
-      <width>331</width>
-      <height>351</height>
+      <y>110</y>
+      <width>311</width>
+      <height>341</height>
      </rect>
     </property>
     <property name="font">
@@ -46,7 +46,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-	color: #66910D;
+	color: #F2C438;
 }</string>
     </property>
     <property name="text">
@@ -59,10 +59,10 @@
    <widget class="QPushButton" name="newBtn">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>100</y>
-      <width>341</width>
-      <height>351</height>
+      <x>570</x>
+      <y>110</y>
+      <width>321</width>
+      <height>341</height>
      </rect>
     </property>
     <property name="font">
@@ -76,7 +76,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-	color: #66910D;
+	color: #F2C438;
 }</string>
     </property>
     <property name="text">
@@ -106,7 +106,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #A7DB37; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="frameShape">
@@ -132,7 +132,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>580</y>
+      <y>590</y>
       <width>871</width>
       <height>71</height>
      </rect>
@@ -147,7 +147,7 @@
      <string notr="true">QProgressBar{
 	background-color: rgb(124, 113, 70);
 	border-radius: 15px;
-	color: #A63F03;
+	color: #593F0E;
 }
 
 QProgressBar::chunk{
@@ -159,7 +159,7 @@ QProgressBar::chunk{
      <number>100</number>
     </property>
     <property name="value">
-     <number>100</number>
+     <number>0</number>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -169,7 +169,7 @@ QProgressBar::chunk{
     <property name="geometry">
      <rect>
       <x>550</x>
-      <y>450</y>
+      <y>460</y>
       <width>341</width>
       <height>61</height>
      </rect>
@@ -182,7 +182,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -196,7 +196,7 @@ QProgressBar::chunk{
     <property name="geometry">
      <rect>
       <x>550</x>
-      <y>510</y>
+      <y>520</y>
       <width>341</width>
       <height>61</height>
      </rect>
@@ -209,7 +209,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -223,7 +223,7 @@ QProgressBar::chunk{
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>450</y>
+      <y>460</y>
       <width>331</width>
       <height>61</height>
      </rect>
@@ -236,7 +236,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -250,7 +250,7 @@ QProgressBar::chunk{
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>510</y>
+      <y>520</y>
       <width>331</width>
       <height>61</height>
      </rect>
@@ -263,7 +263,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -293,7 +293,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #A7DB37; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="frameShape">
@@ -335,7 +335,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -362,7 +362,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -389,7 +389,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -416,7 +416,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -443,7 +443,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -470,7 +470,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -497,7 +497,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #66910D; 
+	color: #F29F05;
 }</string>
     </property>
     <property name="text">
@@ -511,9 +511,9 @@ QProgressBar::chunk{
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>100</y>
+      <y>110</y>
       <width>201</width>
-      <height>81</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -527,7 +527,9 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-	color: #66910D;
+	background-color: #665C4A;
+	border-radius: 20px;
+	color: #F2C438;
 }</string>
     </property>
     <property name="text">
@@ -541,9 +543,9 @@ QProgressBar::chunk{
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>390</y>
+      <y>400</y>
       <width>201</width>
-      <height>61</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -557,7 +559,9 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-	color: #66910D;
+	background-color: #665C4A;
+	border-radius: 20px;
+	color: #F2C438;
 }</string>
     </property>
     <property name="text">
@@ -573,7 +577,7 @@ QProgressBar::chunk{
       <x>10</x>
       <y>10</y>
       <width>891</width>
-      <height>661</height>
+      <height>671</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -633,13 +637,13 @@ QProgressBar::chunk{
      <enum>QFrame::Raised</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_4">
+   <widget class="QFrame" name="frame_6">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>450</y>
-      <width>331</width>
-      <height>121</height>
+      <y>110</y>
+      <width>311</width>
+      <height>341</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -655,13 +659,13 @@ QProgressBar::chunk{
      <enum>QFrame::Raised</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_5">
+   <widget class="QFrame" name="frame_7">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>450</y>
-      <width>341</width>
-      <height>121</height>
+      <x>570</x>
+      <y>110</y>
+      <width>321</width>
+      <height>341</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -679,27 +683,27 @@ QProgressBar::chunk{
    </widget>
    <zorder>frame</zorder>
    <zorder>frame_2</zorder>
-   <zorder>oldBtn</zorder>
-   <zorder>newBtn</zorder>
    <zorder>originalLabel</zorder>
    <zorder>progressBar</zorder>
-   <zorder>word0</zorder>
-   <zorder>word_2</zorder>
-   <zorder>word_1</zorder>
-   <zorder>word2</zorder>
-   <zorder>word1</zorder>
-   <zorder>word3</zorder>
-   <zorder>word_3</zorder>
-   <zorder>manualBtn</zorder>
-   <zorder>stepBtn</zorder>
    <zorder>frame_3</zorder>
    <zorder>translatedLabel</zorder>
-   <zorder>frame_4</zorder>
    <zorder>behind_numLbl</zorder>
    <zorder>behindLbl</zorder>
-   <zorder>frame_5</zorder>
    <zorder>left_numLbl</zorder>
    <zorder>leftLbl</zorder>
+   <zorder>frame_6</zorder>
+   <zorder>word2</zorder>
+   <zorder>word3</zorder>
+   <zorder>word_3</zorder>
+   <zorder>word_2</zorder>
+   <zorder>word0</zorder>
+   <zorder>word1</zorder>
+   <zorder>word_1</zorder>
+   <zorder>manualBtn</zorder>
+   <zorder>stepBtn</zorder>
+   <zorder>oldBtn</zorder>
+   <zorder>frame_7</zorder>
+   <zorder>newBtn</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
