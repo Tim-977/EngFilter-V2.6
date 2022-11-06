@@ -82,11 +82,9 @@ class Window2(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('manual.ui', self)
-        oImage = QImage("Pics\\bgframe.png")
-        sImage = oImage.scaled(QSize(601, 514))
-        palette = QPalette()
-        palette.setBrush(QPalette.Window, QBrush(sImage))
-        self.setPalette(palette)
+        self.setWindowFlags(QtCore.Qt.Widget | QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_NoSystemBackground, True)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
         self.pushButton.clicked.connect(self.closeMyApp_OpenNewApp)
 
     def closeMyApp_OpenNewApp(self):

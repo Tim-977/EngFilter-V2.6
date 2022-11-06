@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>619</width>
-    <height>538</height>
+    <width>627</width>
+    <height>556</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,24 +20,25 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>20</y>
      <width>601</width>
-     <height>101</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>24</pointsize>
+     <family>Jokerman</family>
+     <pointsize>20</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-	color: #66910D;
+	color: #F29F05;
 }</string>
    </property>
    <property name="text">
-    <string>Конец работы программы!
-Пожалуйста, оставьте отзыв ;)</string>
+    <string>The end of the program!
+Please leave a short feedback ;)</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -83,10 +84,17 @@
      <height>251</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Jokerman</family>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">QPlainTextEdit{
-	background-color: rgb(68, 56, 72);
-	color: #66910D;
+	background-color: #F2D888;
+	color: #A63F03;
+	border-radius:20px;
 }</string>
    </property>
    <property name="frameShape">
@@ -96,7 +104,7 @@
     <enum>QFrame::Sunken</enum>
    </property>
    <property name="plainText">
-    <string>Место для отзыва</string>
+    <string>Room for your feedback</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -110,12 +118,13 @@
    </property>
    <property name="font">
     <font>
+     <family>Jokerman</family>
      <pointsize>24</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-	color: #66910D;
+	color: #F29F05;
 }</string>
    </property>
    <property name="frameShape">
@@ -139,12 +148,13 @@
    </property>
    <property name="font">
     <font>
+     <family>Jokerman</family>
      <pointsize>24</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-	color: #66910D;
+	color: #F29F05;
 }</string>
    </property>
    <property name="frameShape">
@@ -168,12 +178,13 @@
    </property>
    <property name="font">
     <font>
+     <family>Jokerman</family>
      <pointsize>24</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-	color: #66910D;
+	color: #F29F05;
 }</string>
    </property>
    <property name="frameShape">
@@ -197,12 +208,13 @@
    </property>
    <property name="font">
     <font>
+     <family>Jokerman</family>
      <pointsize>24</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-	color: #66910D;
+	color: #F29F05;
 }</string>
    </property>
    <property name="frameShape">
@@ -226,12 +238,13 @@
    </property>
    <property name="font">
     <font>
+     <family>Jokerman</family>
      <pointsize>24</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-	color: #66910D;
+	color: #F29F05;
 }</string>
    </property>
    <property name="frameShape">
@@ -247,26 +260,30 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>470</y>
-     <width>561</width>
+     <width>581</width>
      <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Jokerman</family>
      <pointsize>26</pointsize>
     </font>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-	border-radius: 10px;
-	color: rgb(68, 56, 72);
-	background-color: #66910D;
+	border-radius: 20px;
+	color: #595645;
+	background-color: #F29F05;
 }</string>
    </property>
    <property name="text">
-    <string>ОТПРАВИТЬ ОТЗЫВ!</string>
+    <string>SEND FEEDBACK!</string>
    </property>
   </widget>
   <widget class="QFrame" name="frame">
@@ -280,8 +297,8 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QFrame {
-	border-radius: 10px;
-	background-color: rgb(68, 56, 72)
+	border-radius: 20px;
+	background-color: #595645;
 }</string>
    </property>
    <property name="frameShape">

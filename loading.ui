@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>405</width>
+    <width>402</width>
     <height>189</height>
    </rect>
   </property>
@@ -30,8 +30,8 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QFrame {
-	border-radius: 10px;
-	background-color: rgb(68, 56, 72)
+	border-radius: 20px;
+	background-color: #595645;
 }</string>
    </property>
    <property name="frameShape">
@@ -51,26 +51,26 @@
     </property>
     <property name="font">
      <font>
-      <family>Tempus Sans ITC</family>
-      <pointsize>12</pointsize>
+      <family>Jokerman</family>
+      <pointsize>14</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QProgressBar{
-	background-color: rgb(124, 113, 116);
-	border-radius: 10px;
-	color: rgb(68, 56, 72);
+	background-color: rgb(124, 113, 70);
+	border-radius: 15px;
+	color: #A63F03;
 }
 
 QProgressBar::chunk{
-	border-radius: 10px;
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #12E02C, stop:1 #DAEB00);
+	border-radius: 15px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 #F2C744, stop:0 #F2921D);
 }</string>
     </property>
     <property name="value">
-     <number>24</number>
+     <number>100</number>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -85,23 +85,25 @@ QProgressBar::chunk{
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>100</x>
       <y>30</y>
-      <width>341</width>
+      <width>191</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Showcard Gothic</family>
-      <pointsize>18</pointsize>
+      <family>Jokerman</family>
+      <pointsize>22</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: white;
+	border-radius: 10px;
+	color: #F29F05;
+	background-color: #595645;
 }</string>
     </property>
     <property name="text">
@@ -142,6 +144,9 @@ QProgressBar::chunk{
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -152,8 +157,8 @@ QProgressBar::chunk{
     </property>
     <property name="font">
      <font>
-      <family>Showcard Gothic</family>
-      <pointsize>18</pointsize>
+      <family>Jokerman</family>
+      <pointsize>36</pointsize>
      </font>
     </property>
     <property name="cursor">
@@ -162,8 +167,8 @@ QProgressBar::chunk{
     <property name="styleSheet">
      <string notr="true">QPushButton{
 	border-radius: 10px;
-	color: white;
-	background-color: rgb(68, 56, 72);
+	color: #F29F05;
+	background-color: #665C4A;
 }</string>
     </property>
     <property name="text">

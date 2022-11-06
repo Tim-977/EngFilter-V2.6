@@ -1,6 +1,12 @@
 all ~ все
-at ~ в
 chetatam ~ четатам
+fear ~ страх
+light ~ легкий
+mean ~ иметь в виду
+nobody ~ никто
+shourough ~ шуро
+shoutout ~ выкрикивать
+spread ~ распространять
 stand ~ стоять
 that ~ что
 the ~ в
