@@ -1,43 +1,18 @@
 import sys
 
 from deep_translator import GoogleTranslator
-from PyQt5 import uic, QtCore
-from PyQt5.QtCore import QSize, Qt
-from PyQt5.QtGui import QBrush, QFont, QImage, QPalette
+from PyQt5 import QtCore, uic
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 
-import myfuncts as mf
-
-#import pyManual as pm
-
-showManual = mf.showManual
+import first_scan  # Запускаю модуль обработки изначального текста и разделения слов
 
 #TODO:
 #   Make pretty README.MD file
 #   Add a lot of comments
 
-# Открытие необходимых файлов
-# И создание необходимых необходимостей
-
-doScan = mf.doScan
-
-if doScan:
-    print('Do a new scan?\ny/n?')
-
-    while True:
-        choise = input()
-        if choise.lower() == 'y':
-            import first_scan
-            break
-        elif choise.lower() == 'n':
-            print('Ok')
-            break
-        else:
-            print('please, type Y or N')
-            continue
-
-testFlag1 = mf.testFlag1
-testFlag2 = mf.testFlag2
+# Открытие необходимых файлов и создание стурктур данных
 
 f = open('word_list.txt')
 outnew = open('new.txt', 'w', encoding='utf-8')
@@ -50,32 +25,31 @@ words = set([])
 word = ''
 i = ''
 
-# Цикл, делающий множество слов words
+# Цикл, делающий множество слов и удаляющий повторения
 
 for i in f.readlines():
     for j in i + ' ':
         if j in st2:
             if word != ' ' and word != '':
                 words.add(word.lower())
-                mf.testPrint(f"w: {words}", testFlag1)
+                print(f"w: {words}")
                 word = ''
-
         else:
             if j in st:
                 word += j
 
-# Делаем из множества массив и сортируем
+# Делаем из множества список и сортируем его
 
 words = list(words)
 words.sort()
-mf.testPrint(f"WORDS: {words}", testFlag2)
+print(f"WORDS: {words}")
 
-if not len(words):
+if not len(words):  # Проверка на наличие слов
     print('ERROR: YOU DONT HAVE ANY TEXT')
     sys.exit()
 
 
-class Window2(QWidget):
+class Window2(QWidget):  # Класс, создающий окно инструкции
 
     def __init__(self):
         super().__init__()
@@ -96,7 +70,7 @@ class Window2(QWidget):
         self.setFixedHeight(867)
 
 
-class MyWidget(QMainWindow):
+class MyWidget(QMainWindow):  # Класс, создающий главное окно
 
     def __init__(self):
         super().__init__()
@@ -106,12 +80,6 @@ class MyWidget(QMainWindow):
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
         self.setFixedWidth(903)
         self.setFixedHeight(731)
-        self.stepBackFlag = mf.stepBackFlag
-        self.stepBackFlagNew = mf.stepBackFlagNew
-        self.stepBackFlagOld = mf.stepBackFlagOld
-        self.testBnoFlag = mf.testBnoFlag
-        self.testByesFlag = mf.testByesFlag
-        self.testBnoFlag = mf.testBnoFlag
         self.flag = []
         self.words = words
         self.b = 0
@@ -124,7 +92,6 @@ class MyWidget(QMainWindow):
         self.left_numLbl.setText(str(len(self.words)))
         self.originalLabel.setText(self.i)
         self.translatedLabel.setText(self.translatedWords[self.x])
-        #self.translatedLabel.setText('[перевод слова]')
         self.word_3.setText('')
         self.word_2.setText('')
         self.word_1.setText('')
@@ -145,12 +112,10 @@ class MyWidget(QMainWindow):
         self.newBtn.clicked.connect(self.byes)
         self.oldBtn.clicked.connect(self.bno)
         self.manualBtn.clicked.connect(self.window2)
-        # self.newBtn.setStyleSheet("color: green; background-image: url(frame4.png);")
-        # self.oldBtn.setStyleSheet("color: red; background-image: url(frame4.png);")
         self.stepBtn.setEnabled(False)
         self.stepBtn.clicked.connect(self.stepback)
 
-    def keyPressEvent(self, event):
+    def keyPressEvent(self, event):  # Подключение горячих клавиш
         if event.key() == Qt.Key_D and len(self.words) - self.b != 0:
             self.byes()
         if event.key() == Qt.Key_A and len(self.words) - self.b != 0:
@@ -161,15 +126,15 @@ class MyWidget(QMainWindow):
         if event.key() == Qt.Key_F1 and len(self.words) - self.b != 0:
             self.window2()
 
-    def window2(self):
+    def window2(self):  # Вызов окна с инструкцией
         self.w = Window2()
         self.w.show()
 
-    def tran(self, to_translate):
+    def tran(self, to_translate):  # Функция перевода
         return GoogleTranslator(source='en',
                                 target='ru').translate(to_translate)
 
-    def stepback(self):
+    def stepback(self):  # Кнопка Шаг Назад
         if len(self.flag) == 1:
             self.stepBtn.setEnabled(False)
         self.x -= 1
@@ -221,19 +186,19 @@ class MyWidget(QMainWindow):
         elif self.flag[-1] == 'no':
             self.oldWords.pop()
             self.flag.pop()
-        mf.testPrint('Stepped back', self.stepBackFlag)
-        mf.testPrint(f'New: {self.newWords}', self.stepBackFlagNew)
-        mf.testPrint(f'Old: {self.oldWords}', self.stepBackFlagOld)
+        print('Stepped back')
+        print(f'New: {self.newWords}')
+        print(f'Old: {self.oldWords}')
 
-    def byes(self):
+    def byes(self):  # Кнопка New Word
         self.stepBtn.setEnabled(True)
         self.flag.append('yes')
         self.b += 1
         self.left_numLbl.setText(str(len(self.words) - self.b))
         self.behind_numLbl.setText(str(self.b))
-        mf.testPrint(
-            f"{(self.x + 1) * 100 // len(self.words)}% | {self.x + 1} | {self.i} ~~~ is unknown",
-            self.testByesFlag)
+        print(
+            f"{(self.x + 1) * 100 // len(self.words)}% | {self.x + 1} | {self.i} ~~~ is unknown"
+        )
         self.progressBar.setValue((self.x + 1) * 100 // len(self.words))
         #outnew.writelines(self.i + '\n')
         self.newWords.append(
@@ -251,8 +216,6 @@ class MyWidget(QMainWindow):
             else:
                 self.translatedLabel.setFont(QFont('Tempus Sans ITC', 36))
             self.translatedLabel.setText(self.translatedWords[self.x])
-            # self.originalLabel.setText(self.i)
-            # self.translatedLabel.setText(self.translatedWords[self.x])
             if self.x < 3:
                 self.word_3.setText('')
             else:
@@ -281,26 +244,24 @@ class MyWidget(QMainWindow):
             else:
                 self.word3.setText(self.words[self.x + 3])
         else:
-            self.end()
+            self.end(
+            )  # В случае окончания списка слов вызов функции почти завершающей работу программы
             return
 
-    def bno(self):
+    def bno(self):  # Функция кнопки Old Word
         self.stepBtn.setEnabled(True)
         self.flag.append('no')
         self.b += 1
         self.left_numLbl.setText(str(len(self.words) - self.b))
         self.behind_numLbl.setText(str(self.b))
-        mf.testPrint(
-            f"{(self.x + 1) * 100 // len(self.words)}% | {self.x + 1} | {self.i} ~~~ is known",
-            self.testBnoFlag)
+        print(
+            f"{(self.x + 1) * 100 // len(self.words)}% | {self.x + 1} | {self.i} ~~~ is known"
+        )
         self.progressBar.setValue((self.x + 1) * 100 // len(self.words))
-        #outold.writelines(self.i + '\n')
         self.oldWords.append(self.i)
         if self.x + 1 < len(self.words):
             self.x += 1
             self.i = self.words[self.x]
-            #self.originalLabel.setText(self.i)
-            #self.translatedLabel.setText(self.translatedWords[self.x])
             if len(self.words[self.x]) > 15:
                 self.originalLabel.setFont(QFont('Tempus Sans ITC', 30))
             else:
@@ -339,10 +300,11 @@ class MyWidget(QMainWindow):
             else:
                 self.word3.setText(self.words[self.x + 3])
         else:
-            self.end()
+            self.end(
+            )  # В случае окончания списка слов вызов функции почти завершающей работу программы
             return
 
-    def end(self):
+    def end(self):  # Функция которая приводит программу к финалу
         self.originalLabel.setText('[No words left]')
         self.translatedLabel.setText('')
         self.newBtn.setEnabled(False)
@@ -352,8 +314,8 @@ class MyWidget(QMainWindow):
         outnew.write('\n'.join(self.newWords))
         outold.write('\n'.join(self.oldWords))
         self.close()
-        import finalwindow
-        mf.testPrint('bye))', self.testByesFlag)
+        import finalwindow  # Подключения модуля с окном обратной связи
+        print('bye))')
 
 
 if True:
@@ -361,6 +323,8 @@ if True:
     ex = MyWidget()
     ex.show()
     app.exec_()
+
+# Закрытие файлов
 
 f.close()
 outnew.close()

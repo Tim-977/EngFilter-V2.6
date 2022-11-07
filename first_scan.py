@@ -1,16 +1,13 @@
-#import os
 import sys
 
 from deep_translator import GoogleTranslator
 from PyQt5 import QtCore, uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-import myfuncts as mf
-
 print('SCAN STARTED')
 
 
-class MyWidget1(QMainWindow):
+class MyWidget1(QMainWindow): # Класс, поддерживающий окно загрузки
 
     def __init__(self):
         super().__init__()
@@ -21,10 +18,6 @@ class MyWidget1(QMainWindow):
         self.setFixedWidth(405)
         self.setFixedHeight(189)
         self.progressBar.setValue(0)
-        self.testRunFlag = mf.testRunFlag
-        self.testPrecentageFlag = mf.testPrecentageFlag
-        self.testByeFlag = mf.testByeFlag
-        self.translateFunctionsMode = mf.translateFunctionsMode
         self.testPtintWordsFlag = mf.testPtintWordsFlag
         self.f = open('text.txt')
         self.out = open('res.txt', 'w')
@@ -38,14 +31,13 @@ class MyWidget1(QMainWindow):
         self.pushButton.clicked.connect(self.main)
         self.label_file.setText('')
 
-    def tran(self, to_translate):
-        if self.translateFunctionsMode:
-            return GoogleTranslator(source='en',
-                                    target='ru').translate(to_translate)
-        return to_translate
+    def tran(self, to_translate):  # Функция перевода слов
+        return GoogleTranslator(source='en',
+                                target='ru').translate(to_translate)
 
-    def main(self):
+    def main(self):  # Функция, запускающая алгоритм сортировки слов
         self.pushButton.hide()
+        # Цикл, разделяющий текст на слова
         for self.i in self.entireText:
             for self.j in self.i + ' ':
                 if self.j in self.st2:
@@ -56,18 +48,20 @@ class MyWidget1(QMainWindow):
                     if self.j in self.st:
                         self.word += self.j
 
+        # Сортировка слов и удаления дубликатов
+
         self.words = list(self.words)
         self.words.sort()
-        mf.testPrint(self.words, self.testPtintWordsFlag)
+        print(self.words)
         self.i = 0
 
         self.x = len(self.words)
 
-        if not self.x:
+        if not self.x:  # Проверка на наличие слов
             print('ERROR: YOU DONT HAVE ANY TEXT')
             sys.exit()
+        # Алгоритм, удаляющий схожие формы слов
         while self.i < len(self.words) - 1:
-
             if self.words[self.i] + 's' == self.words[
                     self.i +
                     1] or self.words[self.i] + 'es' == self.words[self.i + 1]:
@@ -94,34 +88,28 @@ class MyWidget1(QMainWindow):
 
             self.i += 1
 
-        #translator= Translator(to_lang="ru")
-
         self.x = 0
 
-        for self.i in self.words:
+        # Наполнение файлом готовыми словами и их переводами
 
-            #print(x / len(self.words) * 100, end = '')
+        for self.i in self.words:
             self.x += 1
             print(f"{self.x * 100 // len(self.words)}% | {self.x} | {self.i}")
             self.label_file.setText(self.i)
             self.progressBar.setValue((self.x) * 100 // len(self.words))
-
-            #out.writelines(self.i + ' ' + translator.translate(self.i) + '\n')
             self.out.writelines(self.i + '\n')
             self.out2.writelines(self.i + '\n')
             self.out_tr.writelines(self.tran(self.i) + '\n')
-            #print(tran(self.i))
         self.label_file.setText('Process completed successfully')
         print(self.words)
+
+        # Закрытие файлов
 
         self.f.close()
         self.out.close()
         self.out2.close()
         self.out_tr.close()
-
         self.close()
-
-        print('bye))')
 
 
 app = QApplication(sys.argv)
