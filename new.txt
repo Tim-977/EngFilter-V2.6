@@ -1,20 +1,40 @@
 all ~ все
-chetatam ~ четатам
+and ~ а также
+at ~ в
+back ~ назад
+bad ~ Плохо
+black ~ черный
+cant ~ не мочь
+congratulations ~ поздравления
 fear ~ страх
-mean ~ иметь в виду
-shourough ~ шуро
-shoutout ~ выкрикивать
+gonna ~ собираюсь
+guys ~ ребята
+have ~ имеют
+land ~ земельные участки
+lights ~ огни
+nobody ~ никто
+ours ~ наш
+say ~ сказать
+shootout ~ перестрелка
+showdown ~ выяснение отношений
 spread ~ распространять
 stand ~ стоять
-that ~ что
+tagged ~ помечен
+take ~ брать
+tall ~ высокий
 the ~ в
-therefore ~ следовательно
-this ~ это
+they ~ Oни
+throughout ~ через
+to ~ к
 touches ~ касается
+turn ~ повернуть
 under ~ под
 us ~ нас
 we ~ мы
+wear ~ носить
+were ~ мы
+whats ~ что
 where ~ куда
 within ~ в пределах
 without ~ без
-world ~ Мир
+word ~ слово

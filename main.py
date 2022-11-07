@@ -13,7 +13,6 @@ import myfuncts as mf
 showManual = mf.showManual
 
 #TODO:
-#   Move .ui files in extra folder
 #   Make pretty README.MD file
 #   Add a lot of comments
 
@@ -87,12 +86,12 @@ class Window2(QWidget):
         self.setFixedWidth(627)
         self.setFixedHeight(671)
         self.pushButton.clicked.connect(self.closeMyApp_OpenNewApp)
+        self.eggBtn.clicked.connect(self.easterEgg)
 
     def closeMyApp_OpenNewApp(self):
         self.close()
 
-    def mouseReleaseEvent(self, event):
-        super().mouseReleaseEvent(event)
+    def easterEgg(self):
         self.setFixedWidth(840)
         self.setFixedHeight(867)
 
