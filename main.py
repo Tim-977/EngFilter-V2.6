@@ -15,11 +15,7 @@ showManual = mf.showManual
 #TODO:
 #   Move .ui files in extra folder
 #   Make pretty README.MD file
-#   Make perfect gui design
 #   Add a lot of comments
-#   Add my contacts
-#   Fix words "ios" scroll
-#   Add Snapback secret
 
 # Открытие необходимых файлов
 # И создание необходимых необходимостей
@@ -88,10 +84,17 @@ class Window2(QWidget):
         self.setWindowFlags(QtCore.Qt.Widget | QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_NoSystemBackground, True)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
+        self.setFixedWidth(627)
+        self.setFixedHeight(671)
         self.pushButton.clicked.connect(self.closeMyApp_OpenNewApp)
 
     def closeMyApp_OpenNewApp(self):
         self.close()
+
+    def mouseReleaseEvent(self, event):
+        super().mouseReleaseEvent(event)
+        self.setFixedWidth(840)
+        self.setFixedHeight(867)
 
 
 class MyWidget(QMainWindow):
@@ -147,13 +150,6 @@ class MyWidget(QMainWindow):
         # self.oldBtn.setStyleSheet("color: red; background-image: url(frame4.png);")
         self.stepBtn.setEnabled(False)
         self.stepBtn.clicked.connect(self.stepback)
-        self.word_3.setStyleSheet("color: #C0C0C0;")
-        self.word_2.setStyleSheet("color: #909090;")
-        self.word_1.setStyleSheet("color: #606060;")
-        self.word0.setStyleSheet("color: #000000;")
-        self.word1.setStyleSheet("color: #606060;")
-        self.word2.setStyleSheet("color: #909090;")
-        self.word3.setStyleSheet("color: #C0C0C0;")
 
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_D and len(self.words) - self.b != 0:

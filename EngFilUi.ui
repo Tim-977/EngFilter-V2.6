@@ -362,7 +362,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #F29F05;
+	color: #B37504;
 }</string>
     </property>
     <property name="text">
@@ -389,7 +389,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #F29F05;
+	color: #D18904;
 }</string>
     </property>
     <property name="text">
@@ -416,7 +416,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #F29F05;
+	color: #B37504;
 }</string>
     </property>
     <property name="text">
@@ -443,7 +443,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #F29F05;
+	color: #D18904;
 }</string>
     </property>
     <property name="text">
@@ -470,7 +470,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #F29F05;
+	color: #734B02;
 }</string>
     </property>
     <property name="text">
@@ -497,7 +497,7 @@ QProgressBar::chunk{
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
-	color: #F29F05;
+	color: #734B02;
 }</string>
     </property>
     <property name="text">

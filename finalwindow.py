@@ -1,6 +1,4 @@
-from PyQt5 import uic, QtCore
-from PyQt5.QtCore import QSize
-from PyQt5.QtGui import QBrush, QImage, QPalette
+from PyQt5 import QtCore, uic
 from PyQt5.QtWidgets import QWidget
 
 import dbparser as dbp
@@ -16,11 +14,6 @@ class Final(QWidget):
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
         self.setFixedWidth(619)
         self.setFixedHeight(538)
-        oImage = QImage("Pics\\bgframe.png")
-        sImage = oImage.scaled(QSize(611, 524))
-        palette = QPalette()
-        palette.setBrush(QPalette.Window, QBrush(sImage))
-        self.setPalette(palette)
         self.pushButton.clicked.connect(self.sendReview)
 
     def sendReview(self):

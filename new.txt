@@ -1,14 +1,20 @@
 all ~ все
-at ~ в
 chetatam ~ четатам
-does ~ делает
 fear ~ страх
-light ~ легкий
 mean ~ иметь в виду
-nobody ~ никто
 shourough ~ шуро
 shoutout ~ выкрикивать
 spread ~ распространять
 stand ~ стоять
 that ~ что
 the ~ в
+therefore ~ следовательно
+this ~ это
+touches ~ касается
+under ~ под
+us ~ нас
+we ~ мы
+where ~ куда
+within ~ в пределах
+without ~ без
+world ~ Мир

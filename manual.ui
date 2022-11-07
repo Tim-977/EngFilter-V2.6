@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>633</width>
-    <height>662</height>
+    <width>840</width>
+    <height>867</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,7 +46,7 @@
      <x>20</x>
      <y>10</y>
      <width>601</width>
-     <height>631</height>
+     <height>651</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -65,7 +65,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>550</y>
+      <y>570</y>
       <width>561</width>
       <height>61</height>
      </rect>
@@ -167,10 +167,67 @@
     </property>
    </widget>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>620</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>tg: @timacdc</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>660</y>
+     <width>201</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Pics/snapback2.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>815</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	color: white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Easter Egg</string>
+   </property>
+  </widget>
   <zorder>frame</zorder>
   <zorder>frame_2</zorder>
   <zorder>label_1</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_4</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="Pics/snapback.qrc"/>
+ </resources>
  <connections/>
 </ui>
