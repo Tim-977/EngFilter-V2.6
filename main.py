@@ -318,7 +318,7 @@ class MyWidget(QMainWindow):  # Класс, создающий главное о
         print('bye))')
 
 
-if True:
+if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MyWidget()
     ex.show()

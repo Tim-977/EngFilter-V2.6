@@ -1,22 +1,9 @@
 all ~ все
-and ~ а также
 at ~ в
-back ~ назад
 bad ~ Плохо
-black ~ черный
 cant ~ не мочь
-congratulations ~ поздравления
-fear ~ страх
-gonna ~ собираюсь
-guys ~ ребята
-have ~ имеют
-land ~ земельные участки
-lights ~ огни
-nobody ~ никто
 ours ~ наш
-say ~ сказать
 shootout ~ перестрелка
-showdown ~ выяснение отношений
 spread ~ распространять
 stand ~ стоять
 tagged ~ помечен
@@ -25,16 +12,3 @@ tall ~ высокий
 the ~ в
 they ~ Oни
 throughout ~ через
-to ~ к
-touches ~ касается
-turn ~ повернуть
-under ~ под
-us ~ нас
-we ~ мы
-wear ~ носить
-were ~ мы
-whats ~ что
-where ~ куда
-within ~ в пределах
-without ~ без
-word ~ слово

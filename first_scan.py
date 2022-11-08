@@ -18,7 +18,6 @@ class MyWidget1(QMainWindow): # Класс, поддерживающий окн�
         self.setFixedWidth(405)
         self.setFixedHeight(189)
         self.progressBar.setValue(0)
-        self.testPtintWordsFlag = mf.testPtintWordsFlag
         self.f = open('text.txt')
         self.out = open('res.txt', 'w')
         self.out2 = open('word_list.txt', 'w')
