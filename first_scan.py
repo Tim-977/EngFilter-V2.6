@@ -2,9 +2,25 @@ import sys
 
 from deep_translator import GoogleTranslator
 from PyQt5 import QtCore, uic
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 
 print('SCAN STARTED')
+
+
+class MyError(QWidget):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi('error.ui', self)
+        self.setWindowFlags(QtCore.Qt.Widget | QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_NoSystemBackground, True)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
+        self.pushButton.clicked.connect(self.alert)
+
+    def alert(self): # Функция, которая вызывается в случае отсутствия текса
+        try:
+            raise SystemError
+        except:
+            sys.exit()
 
 
 class MyWidget1(QMainWindow): # Класс, поддерживающий окно загрузки
@@ -58,7 +74,8 @@ class MyWidget1(QMainWindow): # Класс, поддерживающий окн�
 
         if not self.x:  # Проверка на наличие слов
             print('ERROR: YOU DONT HAVE ANY TEXT')
-            sys.exit()
+            self.w = MyError()
+            self.w.show()
         # Алгоритм, удаляющий схожие формы слов
         while self.i < len(self.words) - 1:
             if self.words[self.i] + 's' == self.words[

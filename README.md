@@ -21,4 +21,4 @@
 
 ## Создатель и владелец проекта:
 
-- [Я сам](https://t.me/timacdc) — Chief Developer
+- [Я сам](https://t.me/timacdc) — Мой Телеграмм

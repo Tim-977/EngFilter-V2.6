@@ -142,6 +142,7 @@ class MyWidget(QMainWindow):  # Класс, создающий главное о
         self.i = self.words[self.x]
         self.left_numLbl.setText(str(len(self.words) - self.b))
         self.behind_numLbl.setText(str(self.b))
+        # Форматтер шрифта на случай длинного слова
         if len(self.words[self.x]) > 15:
             self.originalLabel.setFont(QFont('Tempus Sans ITC', 30))
         else:
@@ -153,6 +154,7 @@ class MyWidget(QMainWindow):  # Класс, создающий главное о
             self.translatedLabel.setFont(QFont('Tempus Sans ITC', 36))
         self.translatedLabel.setText(self.translatedWords[self.x])
         self.progressBar.setValue((self.x) * 100 // len(self.words))
+        # Смена слов в столбике посередине
         if self.x < 3:
             self.word_3.setText('')
         else:
@@ -200,12 +202,12 @@ class MyWidget(QMainWindow):  # Класс, создающий главное о
             f"{(self.x + 1) * 100 // len(self.words)}% | {self.x + 1} | {self.i} ~~~ is unknown"
         )
         self.progressBar.setValue((self.x + 1) * 100 // len(self.words))
-        #outnew.writelines(self.i + '\n')
         self.newWords.append(
             f"{self.i} ~ {self.translatedWords[self.x]}".rstrip('\n'))
         if self.x + 1 < len(self.words):
             self.x += 1
             self.i = self.words[self.x]
+            # Форматтер шрифта на случай длинного слова
             if len(self.words[self.x]) > 15:
                 self.originalLabel.setFont(QFont('Tempus Sans ITC', 20))
             else:
@@ -216,6 +218,7 @@ class MyWidget(QMainWindow):  # Класс, создающий главное о
             else:
                 self.translatedLabel.setFont(QFont('Tempus Sans ITC', 36))
             self.translatedLabel.setText(self.translatedWords[self.x])
+            # Смена слов в столбике посередине
             if self.x < 3:
                 self.word_3.setText('')
             else:
@@ -262,6 +265,7 @@ class MyWidget(QMainWindow):  # Класс, создающий главное о
         if self.x + 1 < len(self.words):
             self.x += 1
             self.i = self.words[self.x]
+            # Форматтер шрифта на случай длинного слова
             if len(self.words[self.x]) > 15:
                 self.originalLabel.setFont(QFont('Tempus Sans ITC', 30))
             else:
@@ -272,6 +276,7 @@ class MyWidget(QMainWindow):  # Класс, создающий главное о
             else:
                 self.translatedLabel.setFont(QFont('Tempus Sans ITC', 36))
             self.translatedLabel.setText(self.translatedWords[self.x])
+            # Смена слов в столбике посередине
             if self.x < 3:
                 self.word_3.setText('')
             else:
