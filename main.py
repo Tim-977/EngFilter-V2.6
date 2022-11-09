@@ -8,10 +8,6 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 
 import first_scan  # Запускаю модуль обработки изначального текста и разделения слов
 
-#TODO:
-#   Make pretty README.MD file
-#   Add a lot of comments
-
 # Открытие необходимых файлов и создание стурктур данных
 
 f = open('word_list.txt')
