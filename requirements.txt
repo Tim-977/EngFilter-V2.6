@@ -1,0 +1,3 @@
+deep-translator
+PyQt5
+sqlite3
